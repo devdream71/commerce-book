@@ -1,22 +1,9 @@
- 
-
-
-
-
 import 'package:flutter/material.dart';
-
-import 'package:dotted_line/dotted_line.dart';
-import 'package:f_test/create_new_company/admin_user.dart';
 import 'package:f_test/utils/color.dart';
 import 'package:f_test/utils/string.dart';
 import 'package:f_test/widgets/custom_button.dart';
 import 'package:f_test/widgets/custom_icon_text.dart';
 import 'package:f_test/widgets/custom_text_edit_form.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-
- 
 
 class CreateNewPassword extends StatefulWidget {
   const CreateNewPassword({super.key});
@@ -27,7 +14,7 @@ class CreateNewPassword extends StatefulWidget {
 
 class _CreateNewPasswordState extends State<CreateNewPassword> {
 
-  
+
 
   @override
 
@@ -134,34 +121,39 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                
                 CustomButton(text: "Create New Company                      ", icon: Icons.add, onPressed: (){}, color: const Color(0xff2196f3),),
               
-            
-            
+
+
+                const SizedBox(height: 30,),
+
+                 const Align(
+                  alignment: Alignment.bottomLeft,
+                  child: Text(AppString.demoemail, style: TextStyle(color: Colors.blue),)),
+                const SizedBox(height: 30,),
+
+
+
+              const Align(
+                alignment: Alignment.topLeft,
+                child: const Text(AppString.newPassword)),
+              // const  CustomTextEditForm(),
+
+              const CustomTextFormField(hintText: "Password",),
+
+
+              const Align(
+                alignment: Alignment.topLeft,
+                child: const Text(AppString.rePassword)),
+              // const  CustomTextEditForm(),
+              
+                    
+
+
+              const CustomTextFormField(hintText: "re - Password",),
+
+              const SizedBox(height: 30,),
               
 
-
-
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-            
-              const SizedBox(height: 10,),
-              
-
-                CustomButton(text: "Next", onPressed: (){
+                CustomButton(text: "Submit", onPressed: (){
                  
                 }, color: const Color(0xff82c4f8),),
 
@@ -194,112 +186,3 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
     );
   }
 } 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-class OtpForm extends StatefulWidget {
-  const OtpForm({super.key});
-
-  @override
-  _OtpFormState createState() => _OtpFormState();
-}
-
-class _OtpFormState extends State<OtpForm> {
-  bool isChecked = false;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                "Please Your Mail",
-                style: TextStyle(fontSize: 18),
-              ),
-              const SizedBox(height: 10),
-              Row(
-                children: [
-                  // Email TextField
-                  Expanded(
-                    flex: 3,
-                    child: TextFormField(
-                      decoration: const InputDecoration(
-                        hintText: "Company E-Mail",
-                        border: OutlineInputBorder(),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 5),
-                  // Send OTP Button
-                  Expanded(
-                    flex: 1,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        // Handle OTP send action here
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.red, // Set button color to red
-                      ),
-                      child: const Text("Send OTP"),
-                    ),
-                  ),
-                  const SizedBox(width: 5),
-                  // Checkbox
-                  Expanded(
-                    flex: 1,
-                    child: Checkbox(
-                      value: isChecked,
-                      onChanged: (value) {
-                        setState(() {
-                          isChecked = value!;
-                        });
-                      },
-                      activeColor: Colors.red,
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 5),
-              // Descriptions for the OTP and checkbox
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Check Your Mail",
-                    style: TextStyle(fontSize: 12, color: Colors.black54),
-                  ),
-                  Text(
-                    "Click Tick Mark",
-                    style: TextStyle(fontSize: 12, color: Colors.black54),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
- 

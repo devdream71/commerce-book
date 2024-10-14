@@ -1,4 +1,5 @@
 import 'package:dotted_line/dotted_line.dart';
+import 'package:f_test/create_new_company/general_info.dart';
 import 'package:f_test/create_new_company/create_new_company_password.dart';
 import 'package:f_test/create_new_company/forget_password/forget_password_email.dart';
 import 'package:f_test/utils/color.dart';
@@ -114,7 +115,7 @@ class CreateNewCompany extends StatelessWidget {
               const SizedBox(height: 20,),
             
                
-                CustomButton(text: "Create New Company                      ", icon: Icons.add, onPressed: (){}, color: Color(0xff2196f3),),
+                CustomButton(text: "Create New Company                      ", icon: Icons.add, onPressed: (){Get.to(const GeneralInfo());}, color: Color(0xff2196f3),),
               const SizedBox(height: 10,),
             
             

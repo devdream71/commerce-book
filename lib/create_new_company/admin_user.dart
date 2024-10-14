@@ -93,7 +93,7 @@ class AdminUser extends StatelessWidget {
                   text: "Create New Company                      ",
                   icon: Icons.add,
                   onPressed: () {},
-                  color: Color(0xff2196f3),
+                  color: const Color(0xff2196f3),
                 ),
                 const SizedBox(height: 20,),
                 const Text(AppString.demoemail, style: TextStyle(color: Colors.blue),),
@@ -105,7 +105,7 @@ class AdminUser extends StatelessWidget {
                     length: 2,
                     child: Column(
                       children: [
-                        TabBar(
+                        const TabBar(
                           tabs: [
                             Tab(text: "Admin"),
                             Tab(text: "User"),
@@ -148,7 +148,7 @@ class AdminUser extends StatelessWidget {
   }
 
    
-  //   // Admin Table
+  // Admin Table
   Widget buildAdminTable() {
     final List<Map<String, String>> companyData = [
       {"company": "Dream International Ltd", "data": "500MB"},

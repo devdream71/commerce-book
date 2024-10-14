@@ -1,16 +1,10 @@
 import 'package:f_test/create_new_company/forget_password/create_new_password.dart';
 import 'package:flutter/material.dart';
-
-import 'package:dotted_line/dotted_line.dart';
-import 'package:f_test/create_new_company/admin_user.dart';
 import 'package:f_test/utils/color.dart';
 import 'package:f_test/utils/string.dart';
 import 'package:f_test/widgets/custom_button.dart';
 import 'package:f_test/widgets/custom_icon_text.dart';
-import 'package:f_test/widgets/custom_text_edit_form.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
  
 
