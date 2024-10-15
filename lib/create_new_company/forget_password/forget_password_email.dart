@@ -68,6 +68,10 @@ class _ForgetPasswordEmailState extends State<ForgetPasswordEmail> {
 
                 const SizedBox(height: 10,),
 
+
+                
+
+           
                
                 
                 CustomIconText(icon: Icons.thumb_up ,text: AppString.cloudBaseSoftware,),

@@ -1,4 +1,5 @@
 import 'package:f_test/utils/string.dart';
+import 'package:f_test/widgets/bottom_four_text.dart';
 import 'package:f_test/widgets/custom_button.dart';
 import 'package:f_test/widgets/custom_text_edit_form.dart';
 import 'package:f_test/widgets/label_with_asterisk.dart';
@@ -121,21 +122,23 @@ class _InfoViewState extends State<InfoView> {
 
               const SizedBox(height: 50),
 
-              const Text("• ${AppString.thisISClouldBaseSoftware}"),
-              const Text("• ${AppString.companyNameIsOnlyMAndatory}"),
-              const Text("• ${AppString.andAdminpasswordisMandatory}"),
-              const Text("• ${AppString.enjoyBusinessUseCommerceBookSofware}"),
+              // const Text("• ${AppString.thisISClouldBaseSoftware}"),
+              // const Text("• ${AppString.companyNameIsOnlyMAndatory}"),
+              // const Text("• ${AppString.andAdminpasswordisMandatory}"),
+              // const Text("• ${AppString.enjoyBusinessUseCommerceBookSofware}"),
 
-              const SizedBox(height: 100),
+              const BottomFourText(),
 
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  CustomButton(onPressed: () {}, text: "Update", color: Colors.blue.withOpacity(0.2)),
-                  const SizedBox(width: 10),
-                  CustomButton(onPressed: () {}, text: "Save", color: Colors.blue),
-                ],
-              ),
+              // const SizedBox(height: 100),
+
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.end,
+              //   children: [
+              //     CustomButton(onPressed: () {}, text: "Update", color: Colors.blue.withOpacity(0.2)),
+              //     const SizedBox(width: 10),
+              //     CustomButton(onPressed: () {}, text: "Save", color: Colors.blue),
+              //   ],
+              // ),
             ],
           ),
         ),

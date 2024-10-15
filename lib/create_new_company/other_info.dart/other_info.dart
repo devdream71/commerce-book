@@ -1,4 +1,5 @@
 import 'package:f_test/utils/string.dart';
+import 'package:f_test/widgets/bottom_four_text.dart';
 import 'package:f_test/widgets/custom_button.dart';
 import 'package:f_test/widgets/custom_text_edit_form.dart';
 import 'package:f_test/widgets/label_with_asterisk.dart';
@@ -215,10 +216,12 @@ class _OtherInfoState extends State<OtherInfo> {
 
               const SizedBox(height: 30),
 
-              const Text("• ${AppString.thisISClouldBaseSoftware}"),
-              const Text("• ${AppString.companyNameIsOnlyMAndatory}"),
-              const Text("• ${AppString.andAdminpasswordisMandatory}"),
-              const Text("• ${AppString.enjoyBusinessUseCommerceBookSofware}"),
+              // const Text("• ${AppString.thisISClouldBaseSoftware}"),
+              // const Text("• ${AppString.companyNameIsOnlyMAndatory}"),
+              // const Text("• ${AppString.andAdminpasswordisMandatory}"),
+              // const Text("• ${AppString.enjoyBusinessUseCommerceBookSofware}"),
+
+              const BottomFourText(),
 
               const SizedBox(height: 100),
 

@@ -34,7 +34,7 @@ class CustomTextFormField extends StatelessWidget {
           contentPadding: const EdgeInsets.all(16),
           suffixIcon: showDropdownIcon
               ? IconButton(
-                  icon: Icon(customIcon),
+                  icon: const Icon(Icons.arrow_drop_down),
                   onPressed: onPressed,
                 )
               : null,  
