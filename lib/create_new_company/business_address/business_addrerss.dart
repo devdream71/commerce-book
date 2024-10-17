@@ -47,11 +47,7 @@ class _BusinessAddrerssState extends State<BusinessAddrerss> {
 
               const SizedBox(height: 30),
 
-              // const Text("• ${AppString.thisISClouldBaseSoftware}"),
-              // const Text("• ${AppString.companyNameIsOnlyMAndatory}"),
-              // const Text("• ${AppString.andAdminpasswordisMandatory}"),
-              // const Text("• ${AppString.enjoyBusinessUseCommerceBookSofware}"),
-
+               
               const BottomFourText(),
 
               const SizedBox(height: 100),

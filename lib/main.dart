@@ -26,8 +26,8 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (context)=>SideBarController())
       ],
-      child: MaterialApp.router(
-        routerConfig: routerConfig,
+      child: GetMaterialApp(
+        //routerConfig: routerConfig,
         title: 'Commerce Book',
         theme: ThemeData(
            
@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
        // home: const VatTax(),
         //home: const Signature(),
         //home: const OtherInfo(),
-        //home: const CreateNewCompany(),
+        home: const CreateNewCompany(),
       ),
     );
   }

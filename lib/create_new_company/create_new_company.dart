@@ -1,16 +1,20 @@
+import 'dart:io';
+
 import 'package:dotted_line/dotted_line.dart';
-import 'package:f_test/controller/pages/entry_point.dart';
 import 'package:f_test/create_new_company/general_info.dart';
 import 'package:f_test/create_new_company/create_new_company_password.dart';
 import 'package:f_test/create_new_company/forget_password/forget_password_email.dart';
 import 'package:f_test/utils/color.dart';
 import 'package:f_test/utils/string.dart';
+import 'package:f_test/widgets/custom_11_dot_button.dart';
 import 'package:f_test/widgets/custom_button.dart';
-import 'package:f_test/widgets/custom_icon_text.dart';
+import 'package:f_test/widgets/custom_four_icon_bottom.dart';
+import 'package:f_test/widgets/custom_four_icon_top.dart';
 import 'package:f_test/widgets/custom_text_edit_form.dart';
+import 'package:f_test/widgets/custom_thumb_up_five.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 class CreateNewCompany extends StatelessWidget {
   const CreateNewCompany({super.key});
@@ -18,201 +22,190 @@ class CreateNewCompany extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.appBGColor,
-      body: Row(children: [
-        Expanded(
-            child: Padding(
-          padding: const EdgeInsets.only(left: 40.0, top: 50),
+      backgroundColor: Colors.white,
+      body: Padding(
+        padding:
+            const EdgeInsets.only(left: 90, right: 90, top: 90, bottom: 90),
+        child: Container(
+          decoration: BoxDecoration(
+              color: AppColor.appBGColor,
+              borderRadius: BorderRadius.circular(5)),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(
-                height: 10,
-              ),
-              Row(
-                children: [
-                  SizedBox(
-                    height: 50,
-                    width: 50,
-                    child: Image.asset("assets/image/cloudload.png"),
-                  ),
-                  SizedBox(
-                    height: 50,
-                    width: 50,
-                    child: Image.asset("assets/image/shopping.jpg"),
-                  ),
-                  SizedBox(
-                    height: 50,
-                    width: 50,
-                    child: Image.asset("assets/image/visacard.png"),
-                  ),
-                  SizedBox(
-                    height: 50,
-                    width: 50,
-                    child: Image.asset("assets/image/mastercard.png"),
-                  ),
-                ],
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              CustomIconText(
-                icon: Icons.thumb_up,
-                text: AppString.cloudBaseSoftware,
-              ),
-              CustomIconText(
-                icon: Icons.thumb_up,
-                text: AppString.webApp,
-              ),
-              CustomIconText(icon: Icons.thumb_up, text: AppString.desktopApp),
-              CustomIconText(icon: Icons.thumb_up, text: AppString.ios),
-              CustomIconText(icon: Icons.thumb_up, text: AppString.androidApp),
-              const SizedBox(
-                height: 10,
-              ),
               Padding(
-                padding: const EdgeInsets.only(left: 30.0),
-                child: Column(
+                padding: const EdgeInsets.only(top: 16.0, left: 16, right: 16),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    CustomIconText(
-                        icon: Icons.album, text: AppString.androidApp),
-                    CustomIconText(
-                        icon: Icons.album, text: AppString.inventorybilling),
-                    CustomIconText(icon: Icons.album, text: AppString.pos),
-                    CustomIconText(
-                        icon: Icons.album, text: AppString.manufacturing),
-                    CustomIconText(
-                        icon: Icons.album, text: AppString.onlineStore),
-                    CustomIconText(
-                        icon: Icons.album, text: AppString.marketPlace),
-                    CustomIconText(icon: Icons.album, text: AppString.payroll),
-                    CustomIconText(icon: Icons.album, text: AppString.crm),
-                    CustomIconText(
-                        icon: Icons.album, text: AppString.paymentGateway),
-                    CustomIconText(
-                        icon: Icons.album, text: AppString.multiuserAccess),
-                    CustomIconText(
-                        icon: Icons.album, text: AppString.companyPortfoli),
+                    CircleAvatar(
+                        backgroundColor: Colors.white,
+                        child: IconButton(
+                            onPressed: () {
+                              // SystemNavigator.pop();
+                              // exit(0);
+                              showAlertDialog(context);
+                            },
+                            icon: const Icon(Icons.close))),
                   ],
                 ),
               ),
-              const SizedBox(
-                height: 30,
-              ),
-              SizedBox(
-                height: 150,
-                width: 220,
-                child: Image.asset("assets/image/sublogo.png"),
-              ),
+              Row(children: [
+                //left size
+
+                Expanded(
+                    child: Padding(
+                  padding: const EdgeInsets.only(left: 80.0, right: 80),
+                  child: Container(
+                    // color: Colors.yellow,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const CustomFourIconTop(),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        const CustomThumbUpFive(),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        const Custom11DotButton(),
+                        const SizedBox(
+                          height: 30,
+                        ),
+                        SizedBox(
+                          height: 150,
+                          width: 220,
+                          child: Image.asset("assets/image/sublogo.png"),
+                        ),
+                      ],
+                    ),
+                  ),
+                )),
+
+                //right side
+                Expanded(
+                    child: Padding(
+                  padding: const EdgeInsets.only(right: 60.0),
+                  child: Container(
+                    // color: Colors.red,
+                    child: Column(
+                      children: [
+                        Image.asset("assets/image/banklogo.PNG"),
+
+                        const SizedBox(
+                          height: 20,
+                        ),
+
+                        CustomButton(
+                          text: "Create New Company",
+                          icon: Icons.add,
+                          onPressed: () {
+                            Get.to(const GeneralInfo());
+                          },
+                          color: const Color(0xff2196f3),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+
+                        const Text(AppString.appAllreadyHaveAccount),
+                        const DottedLine(),
+
+                        const SizedBox(
+                          height: 10,
+                        ),
+
+                        const Align(
+                            alignment: Alignment.topLeft,
+                            child: Text(AppString.companyEmail)),
+                        // const  CustomTextEditForm(),
+
+                        const CustomTextFormField(
+                          hintText: "Company E-mail",
+                        ),
+
+                        const SizedBox(
+                          height: 10,
+                        ),
+
+                        CustomButton(
+                          text: "Next",
+                          onPressed: () {
+                            Get.to(const CreateNewCompanyPassword(),
+                                transition: Transition.rightToLeftWithFade);
+                          },
+                          color: const Color(0xff82c4f8),
+                        ),
+
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Get.to(const ForgetPasswordEmail(),
+                                transition: Transition.rightToLeftWithFade);
+                          },
+                          child: const Align(
+                            alignment: Alignment.topLeft,
+                            child: Text(
+                              AppString.forgetPassword,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.redAccent),
+                            ),
+                          ),
+                        ),
+
+                        const SizedBox(
+                          height: 120,
+                        ),
+
+                        const CustomFourIconBottom(),
+                      ],
+                    ),
+                  ),
+                ))
+              ]),
             ],
           ),
-        )),
-        Expanded(
-            child: Padding(
-          padding: const EdgeInsets.only(right: 60.0),
-          child: Column(
-            children: [
-              const SizedBox(
-                height: 100,
-              ),
-              Image.asset("assets/image/banklogo.PNG"),
+        ),
+      ),
+    );
+  }
 
-              const SizedBox(
-                height: 20,
-              ),
-               
-            
-
-              CustomButton(
-                text: "Create New Company                      ",
-                icon: Icons.add,
-                onPressed: () {
-                  Get.to(const GeneralInfo());
-                },
-                color: Color(0xff2196f3),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-
-              const Text(AppString.appAllreadyHaveAccount),
-              const DottedLine(),
-
-              const SizedBox(
-                height: 10,
-              ),
-
-              const Align(
-                  alignment: Alignment.topLeft,
-                  child: const Text(AppString.companyEmail)),
-              // const  CustomTextEditForm(),
-
-              const CustomTextFormField(
-                hintText: "Company E-mail",
-              ),
-
-              const SizedBox(
-                height: 10,
-              ),
-
-              CustomButton(
-                text: "Next",
-                onPressed: () {
-                  Get.to(const CreateNewCompanyPassword());
-                   
-                },
-                color: const Color(0xff82c4f8),
-              ),
-
-              const SizedBox(
-                height: 10,
-              ),
-              GestureDetector(
-                onTap: () {
-                  Get.to(const ForgetPasswordEmail());
-                },
-                child: const Align(
-                    alignment: Alignment.topLeft,
-                    child: Text(AppString.forgetPassword)),
-              ),
-
-              const SizedBox(
-                height: 120,
-              ),
-
-              Row(
-                children: [
-                   
-                  SizedBox(
-                    height: 30,
-                    width: 30,
-                    child: Image.asset("assets/image/telegram-nobg.png"),
-                  ),
-                  SizedBox(
-                    height: 30,
-                    width: 30,
-                    child: Image.asset("assets/image/whatsapp-nobg.png"),
-                  ),
-                  SizedBox(
-                    height: 30,
-                    width: 30,
-                    child: Image.asset("assets/image/youtube-nobg.png"),
-                  ),
-                  
-                  
-                  const Spacer(),
-                  SizedBox(
-                    height: 50,
-                    width: 50,
-                    child: Image.asset("assets/image/customerservice-nobg.png"),
-                  ),
-                ],
-              )
-            ],
-          ),
-        ))
-      ]),
+  showAlertDialog(BuildContext context) {
+    // set up the buttons
+    Widget cancelButton = TextButton(
+      child: const Text("Cancel"),
+      onPressed: () {
+        Navigator.of(context).pop();
+      },
+    );
+    Widget continueButton = TextButton(
+      child: const Text(
+        "Quit",
+        style: TextStyle(color: Colors.red),
+      ),
+      onPressed: () {
+        exit(0);
+      },
+    );
+    // set up the AlertDialog
+    AlertDialog alert = AlertDialog(
+      title: const Text("Quit"),
+      content: const Text("Are you sure, you wanna quit?"),
+      actions: [
+        cancelButton,
+        continueButton,
+      ],
+    );
+    // show the dialog
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
     );
   }
 }

@@ -43,10 +43,7 @@ class GeneralInfo extends StatelessWidget {
           
               const SizedBox(height: 30,),
               
-              // const Text("• ${AppString.thisISClouldBaseSoftware}"),
-              // const Text("• ${AppString.companyNameIsOnlyMAndatory}"),
-              // const Text("• ${AppString.andAdminpasswordisMandatory}"),
-              // const Text("• ${AppString.enjoyBusinessUseCommerceBookSofware}"),
+           
 
               
              //using custom bottom text. 

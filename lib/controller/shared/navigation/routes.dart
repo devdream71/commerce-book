@@ -1,8 +1,5 @@
 
-import 'package:f_test/controller/pages/ataglance/ataglance.dart';
-import 'package:f_test/controller/pages/authentication/register_page.dart';
-import 'package:f_test/controller/pages/authentication/sign_in_page.dart';
-import 'package:f_test/controller/pages/dashboard/dashboard_page.dart';
+import 'package:f_test/controller/page_router_builder.dart';
 import 'package:f_test/controller/pages/entry_point.dart';
 import 'package:f_test/create_new_company/admin_user.dart';
 import 'package:f_test/create_new_company/business_address/business_addrerss.dart';
@@ -18,59 +15,119 @@ import 'package:go_router/go_router.dart';
 final routerConfig = GoRouter(
   initialLocation: '/',
   routes: [
-    GoRoute(
+    // GoRoute(
+    //   path: '/',
+    //   builder: (context, state) => const EntryPoint(child: GeneralInfo(),),
+    // ),
+     GoRoute(
       path: '/',
-      builder: (context, state) => const EntryPoint(child: GeneralInfo()),
+      pageBuilder: (context, state) {
+        return fadeInRightToLeftTransition(const EntryPoint(child: GeneralInfo()));
+      },
     ),
-    GoRoute(
+   
+    
+
+     GoRoute(
       path: '/sign-in',
-      builder: (context, state) => const CreateNewCompany(),
+      pageBuilder: (context, state) {
+        return fadeInRightToLeftTransition(const EntryPoint(child: CreateNewCompany()));
+      },
     ),
+     
+
     GoRoute(
       path: '/register',
-      builder: (context, state) => const AdminUser(), 
+      pageBuilder: (context, state) {
+        return fadeInRightToLeftTransition(const EntryPoint(child: AdminUser()));
+      },
     ),
 
-     
     GoRoute(
       path: '/generalinfo',
-      builder: (context, state) => const EntryPoint(child: GeneralInfo()),
+      pageBuilder: (context, state) {
+        return fadeInRightToLeftTransition(const EntryPoint(child: GeneralInfo()));
+      },
     ),
+
+    
 
     GoRoute(
       path: '/businessinfo',
-      builder: (context, state) => const EntryPoint(child: BusinessInfo()),
+      pageBuilder: (context, state) {
+        return fadeInRightToLeftTransition(const EntryPoint(child: BusinessInfo()));
+      },
     ),
+
+    // GoRoute(
+    //   path: '/BussinessAddress',
+    //   builder: (context, state) => const EntryPoint(child: BusinessAddrerss()),
+    // ),
 
     GoRoute(
       path: '/BussinessAddress',
-      builder: (context, state) => const EntryPoint(child: BusinessAddrerss()),
+      pageBuilder: (context, state) {
+        return fadeInRightToLeftTransition(const EntryPoint(child: BusinessAddrerss()));
+      },
     ),
+
+    // GoRoute(
+    //   path: '/VatTax',
+    //   builder: (context, state) => const EntryPoint(child: VatTax()),
+    // ),
 
     GoRoute(
       path: '/VatTax',
-      builder: (context, state) => const EntryPoint(child: VatTax()),
+      pageBuilder: (context, state) {
+        return fadeInRightToLeftTransition(const EntryPoint(child: VatTax()));
+      },
     ),
+
+    // GoRoute(
+    //   path: '/LogoSingnature',
+    //   builder: (context, state) => const EntryPoint(child: Signature()),
+    // ),
 
     GoRoute(
       path: '/LogoSingnature',
-      builder: (context, state) => const EntryPoint(child: Signature()),
+      pageBuilder: (context, state) {
+        return fadeInRightToLeftTransition(const EntryPoint(child: Signature()));
+      },
     ),
+
+    
 
     GoRoute(
       path: '/OthersInfo',
-      builder: (context, state) => const EntryPoint(child: OtherInfo()),
+      pageBuilder: (context, state) {
+        return fadeInRightToLeftTransition(const EntryPoint(child: OtherInfo()));
+      },
     ),
+
+    // GoRoute(
+    //   path: '/AdminPassword',
+    //   builder: (context, state) => const EntryPoint(child: OtherInfo()),
+    // ),
 
     GoRoute(
       path: '/AdminPassword',
-      builder: (context, state) => const EntryPoint(child: OtherInfo()),
+      pageBuilder: (context, state) {
+        return fadeInRightToLeftTransition(const EntryPoint(child: OtherInfo()));
+      },
     ),
 
-    GoRoute(
+    // GoRoute(
+    //   path: '/InfoView',
+    //   builder: (context, state) => const EntryPoint(child: InfoView()),
+    // ),
+
+     GoRoute(
       path: '/InfoView',
-      builder: (context, state) => const EntryPoint(child: InfoView()),
+      pageBuilder: (context, state) {
+        return fadeInRightToLeftTransition(const EntryPoint(child: InfoView()));
+      },
     ),
+    
 
 
     GoRoute(

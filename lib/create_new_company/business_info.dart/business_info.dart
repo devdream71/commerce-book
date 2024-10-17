@@ -113,11 +113,7 @@ class _BusinessInfoState extends State<BusinessInfo> {
 
               const SizedBox(height: 30),
 
-              // const Text("• ${AppString.thisISClouldBaseSoftware}"),
-              // const Text("• ${AppString.companyNameIsOnlyMAndatory}"),
-              // const Text("• ${AppString.andAdminpasswordisMandatory}"),
-              // const Text("• ${AppString.enjoyBusinessUseCommerceBookSofware}"),
-
+              
               const BottomFourText(),
 
               const SizedBox(height: 100),

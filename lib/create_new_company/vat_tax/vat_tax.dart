@@ -45,10 +45,7 @@ class _VatTaxState extends State<VatTax> {
 
               const SizedBox(height: 30),
 
-              // const Text("• ${AppString.thisISClouldBaseSoftware}"),
-              // const Text("• ${AppString.companyNameIsOnlyMAndatory}"),
-              // const Text("• ${AppString.andAdminpasswordisMandatory}"),
-              // const Text("• ${AppString.enjoyBusinessUseCommerceBookSofware}"),
+         
 
               const BottomFourText(),
 

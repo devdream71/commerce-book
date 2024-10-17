@@ -78,6 +78,7 @@ class TabSidebar extends StatelessWidget {
               ),
             ),
           ),
+          
           Column(
             children: [
               IconTile(
