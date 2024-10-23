@@ -34,6 +34,19 @@ class _BusinessAddrerssState extends State<BusinessAddrerss> {
                 style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 20),
+
+              Align(
+                alignment: Alignment.center,
+                child: SizedBox(
+                  height: 100,
+                  width: 100,
+                  child: Image.asset("assets/image/cBook_logo_nobg.png"),
+                ),
+              ),
+
+              const SizedBox(height: 20),
+
+
               
               const LabelWithAsterisk(labelText: AppString.countryInfo),
               CustomTextFormField(hintText: AppString.countryInfo, controller: countryInfoController,),

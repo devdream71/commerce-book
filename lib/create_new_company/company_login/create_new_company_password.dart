@@ -1,5 +1,5 @@
 import 'package:dotted_line/dotted_line.dart';
-import 'package:f_test/create_new_company/admin_user.dart';
+import 'package:f_test/create_new_company/company_login/admin_user.dart';
 import 'package:f_test/create_new_company/forget_password/forget_password_email.dart';
 import 'package:f_test/utils/color.dart';
 import 'package:f_test/utils/string.dart';

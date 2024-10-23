@@ -35,7 +35,7 @@ class _GeneralInfoState extends State<GeneralInfo> {
 
               const Align(
                 alignment: Alignment.center,
-                child: const Text("Company Information", style: TextStyle(color: Colors.black45, fontWeight: FontWeight.bold),)),
+                child: Text("Company Information", style: TextStyle(color: Colors.black45, fontWeight: FontWeight.bold),)),
               const SizedBox(height: 10,),
 
               Align(
@@ -68,12 +68,12 @@ class _GeneralInfoState extends State<GeneralInfo> {
               const LabelWithAsterisk(labelText: AppString.address, isRequired: true,),
               CustomTextFormField(hintText: "#H 24, #R 14, Dhanmondi, Dhaka Bangladesh", maxLines: 1, controller: addressController,),
 
-              const SizedBox(height: 30,),
+              const SizedBox(height: 25,),
 
              //using custom bottom text.
               const BottomFourText(),
 
-              const SizedBox(height: 30,),
+              const SizedBox(height: 25,),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,

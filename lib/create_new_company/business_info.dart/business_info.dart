@@ -56,6 +56,19 @@ class _BusinessInfoState extends State<BusinessInfo> {
                 ),
               ),
               const SizedBox(height: 20),
+
+              Align(
+                alignment: Alignment.center,
+                child: SizedBox(
+                  height: 100,
+                  width: 100,
+                  child: Image.asset("assets/image/cBook_logo_nobg.png"),
+                ),
+              ),
+
+              const SizedBox(height: 20),
+
+
               
               const LabelWithAsterisk(labelText: AppString.ownerShip),
               CustomTextFormField(hintText: AppString.ownerShip, showDropdownIcon: true, controller: ownerShipController,),

@@ -1,12 +1,12 @@
 
 import 'package:f_test/controller/page_router_builder.dart';
 import 'package:f_test/controller/pages/entry_point.dart';
-import 'package:f_test/create_new_company/admin_user.dart';
+import 'package:f_test/create_new_company/company_login/admin_user.dart';
 import 'package:f_test/create_new_company/business_address/business_addrerss.dart';
 import 'package:f_test/create_new_company/business_address/info_view/info_view.dart';
 import 'package:f_test/create_new_company/business_info.dart/business_info.dart';
-import 'package:f_test/create_new_company/create_new_company.dart';
-import 'package:f_test/create_new_company/general_info.dart';
+import 'package:f_test/create_new_company/company_login/create_new_company.dart';
+import 'package:f_test/create_new_company/general_info/general_info.dart';
 import 'package:f_test/create_new_company/other_info.dart/other_info.dart';
 import 'package:f_test/create_new_company/signature/signature.dart';
 import 'package:f_test/create_new_company/vat_tax/vat_tax.dart';

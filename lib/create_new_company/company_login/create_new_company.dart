@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:dotted_line/dotted_line.dart';
-import 'package:f_test/create_new_company/general_info.dart';
-import 'package:f_test/create_new_company/create_new_company_password.dart';
+import 'package:f_test/create_new_company/general_info/general_info.dart';
+import 'package:f_test/create_new_company/company_login/create_new_company_password.dart';
 import 'package:f_test/create_new_company/forget_password/forget_password_email.dart';
 import 'package:f_test/utils/color.dart';
 import 'package:f_test/utils/string.dart';
@@ -17,11 +17,11 @@ import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../controller/controller/side_bar_controller.dart';
-import '../controller/pages/entry_point.dart';
-import '../controller/pages/welcome.dart';
-import '../utils/imagepath.dart';
-import 'business_address/business_addrerss.dart';
+import '../../controller/controller/side_bar_controller.dart';
+import '../../controller/pages/entry_point.dart';
+import '../../controller/pages/welcome.dart';
+import '../../utils/imagepath.dart';
+import '../business_address/business_addrerss.dart';
 
 class CreateNewCompany extends StatefulWidget {
   const CreateNewCompany({super.key});
