@@ -9,23 +9,23 @@ class CustomFourIconTop extends StatelessWidget {
       child: Row(
         children: [
           SizedBox(
-            height: 50,
-            width: 50,
+            height: 30,
+            width: 30,
             child: Image.asset("assets/image/cloudload.png"),
           ),
           SizedBox(
-            height: 50,
-            width: 50,
+            height: 40,
+            width: 40,
             child: Image.asset("assets/image/shopping.jpg"),
           ),
           SizedBox(
-            height: 50,
-            width: 50,
+            height: 40,
+            width: 40,
             child: Image.asset("assets/image/visacard.png"),
           ),
           SizedBox(
-            height: 50,
-            width: 50,
+            height: 40,
+            width: 40,
             child: Image.asset("assets/image/mastercard.png"),
           ),
         ],

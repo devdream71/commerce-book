@@ -49,7 +49,7 @@ class AdminUser extends StatelessWidget {
                 const Expanded(
                   child: Padding(
                     padding: EdgeInsets.only(
-                      left: 80.0,
+                      left: 80.0, right: 80
                     ),
                     child: SizedBox(
                       child: Column(
@@ -93,7 +93,11 @@ class AdminUser extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Center(child: Image.asset("assets/image/banklogo.PNG")),
+                        SizedBox(height: 60,),
+                        Center(child: SizedBox(
+                          height: 150,
+                          width: 150,
+                          child: Image.asset("assets/image/cBook_logo_nobg.png"))),
                         const SizedBox(
                           height: 10,
                         ),
@@ -140,7 +144,10 @@ class AdminUser extends StatelessWidget {
                         const SizedBox(
                           height: 20,
                         ),
-                        const CustomFourIconBottom()
+                        const CustomFourIconBottom(),
+                        const SizedBox(
+                          height: 30,
+                        ),
                       ],
                     ),
                   ),

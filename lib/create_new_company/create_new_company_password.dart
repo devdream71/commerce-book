@@ -12,8 +12,16 @@ import 'package:f_test/widgets/custom_thumb_up_five.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class CreateNewCompanyPassword extends StatelessWidget {
+class CreateNewCompanyPassword extends StatefulWidget {
   const CreateNewCompanyPassword({super.key});
+
+  @override
+  State<CreateNewCompanyPassword> createState() => _CreateNewCompanyPasswordState();
+}
+
+class _CreateNewCompanyPasswordState extends State<CreateNewCompanyPassword> {
+
+   TextEditingController passController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +63,7 @@ class CreateNewCompanyPassword extends StatelessWidget {
                 //left side
                 Expanded(
                     child: Padding(
-                  padding: const EdgeInsets.only(left: 80.0, top: 80),
+                  padding: const EdgeInsets.only(left: 80.0, right: 80),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -89,7 +97,10 @@ class CreateNewCompanyPassword extends StatelessWidget {
                   padding: const EdgeInsets.only(right: 60.0),
                   child: Column(
                     children: [
-                      Image.asset("assets/image/banklogo.PNG"),
+                      SizedBox(
+                        height: 150,
+                        width: 150,
+                        child: Image.asset("assets/image/cBook_logo_nobg.png")),
 
                       const SizedBox(
                         height: 20,
@@ -106,7 +117,12 @@ class CreateNewCompanyPassword extends StatelessWidget {
                       ),
 
                       const Text(AppString.appAllreadyHaveAccount),
-                      const DottedLine(),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const DottedLine(
+                        dashColor: Colors.grey,
+                      ),
 
                       const SizedBox(
                         height: 10,
@@ -117,8 +133,9 @@ class CreateNewCompanyPassword extends StatelessWidget {
                           child: const Text(AppString.password)),
                       // const  CustomTextEditForm(),
 
-                      const CustomTextFormField(
+                      CustomTextFormField(
                         hintText: "Password",
+                        controller: passController,
                       ),
 
                       const SizedBox(
@@ -147,16 +164,19 @@ class CreateNewCompanyPassword extends StatelessWidget {
                             child: Text(
                               AppString.forgetPassword,
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold,
+                                  fontWeight: FontWeight.w400,
                                   color: Colors.redAccent),
                             )),
                       ),
 
                       const SizedBox(
-                        height: 120,
-                      ),
+                          height: 250,
+                        ),
 
                       const CustomFourIconBottom(),
+                      const SizedBox(
+                          height: 30,
+                        ),
                     ],
                   ),
                 ))

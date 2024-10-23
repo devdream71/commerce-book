@@ -14,6 +14,8 @@ class BusinessInfo extends StatefulWidget {
 }
 
 class _BusinessInfoState extends State<BusinessInfo> {
+
+
   final Map<String, bool> _businessCategories = {
     "Manufacturing": false,
     "Depot": false,
@@ -25,6 +27,16 @@ class _BusinessInfoState extends State<BusinessInfo> {
     "E-Commerce": false,
     "Service": false,
   };
+
+  final TextEditingController ownerShipController = TextEditingController();
+  final TextEditingController businessAddressController = TextEditingController();
+  final TextEditingController softwareStartDateController = TextEditingController();
+  final TextEditingController openingCashController = TextEditingController();
+  final TextEditingController treadLicenseNOController = TextEditingController();
+  final TextEditingController vatBinController = TextEditingController();
+  final TextEditingController businessType = TextEditingController();
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -46,32 +58,36 @@ class _BusinessInfoState extends State<BusinessInfo> {
               const SizedBox(height: 20),
               
               const LabelWithAsterisk(labelText: AppString.ownerShip),
-              const CustomTextFormField(hintText: AppString.ownerShip, showDropdownIcon: true),
+              CustomTextFormField(hintText: AppString.ownerShip, showDropdownIcon: true, controller: ownerShipController,),
               const SizedBox(height: 8),
 
               
               const LabelWithAsterisk(labelText: AppString.businessStartYear),
-              const CustomTextFormField(hintText: AppString.businessAddress, showDropdownIcon: true),
+                CustomTextFormField(hintText: AppString.businessAddress, showDropdownIcon: true,
+
+              controller: businessAddressController,),
               const SizedBox(height: 8),
 
               
               const LabelWithAsterisk(labelText: AppString.softwareStartDate),
-              const CustomTextFormField(hintText: AppString.softwareStartDate, showDropdownIcon: true),
+              CustomTextFormField(hintText: AppString.softwareStartDate, showDropdownIcon: true,
+              controller: softwareStartDateController,
+              ),
               const SizedBox(height: 8),
 
               
               const LabelWithAsterisk(labelText: AppString.openingCash),
-              const CustomTextFormField(hintText: AppString.openingCash),
+               CustomTextFormField(hintText: AppString.openingCash, controller: openingCashController,),
               const SizedBox(height: 8),
 
               
               const LabelWithAsterisk(labelText: AppString.treadLicenseNO),
-              const CustomTextFormField(hintText: AppString.treadLicenseNO),
+                CustomTextFormField(hintText: AppString.treadLicenseNO, controller: treadLicenseNOController),
               const SizedBox(height: 8),
 
               
               const LabelWithAsterisk(labelText: AppString.vatBinNo),
-              const CustomTextFormField(hintText: AppString.vatBinNo),
+                CustomTextFormField(hintText: AppString.vatBinNo, controller: vatBinController,),
 
               const SizedBox(height: 20),
 
@@ -109,7 +125,7 @@ class _BusinessInfoState extends State<BusinessInfo> {
               ),
 
               const LabelWithAsterisk(labelText: AppString.businessType),
-              const CustomTextFormField(hintText: AppString.businessType, showDropdownIcon: true),
+              CustomTextFormField(hintText: AppString.businessType, showDropdownIcon: true, controller: businessType),
 
               const SizedBox(height: 30),
 

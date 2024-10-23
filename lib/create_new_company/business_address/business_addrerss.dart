@@ -13,6 +13,10 @@ class BusinessAddrerss extends StatefulWidget {
 }
 
 class _BusinessAddrerssState extends State<BusinessAddrerss> {
+
+  final TextEditingController countryInfoController = TextEditingController();
+  final TextEditingController zipCodeController = TextEditingController();
+  final TextEditingController businessAddressController = TextEditingController();
    
 
   @override
@@ -32,15 +36,15 @@ class _BusinessAddrerssState extends State<BusinessAddrerss> {
               const SizedBox(height: 20),
               
               const LabelWithAsterisk(labelText: AppString.countryInfo),
-              const CustomTextFormField(hintText: AppString.countryInfo),
+              CustomTextFormField(hintText: AppString.countryInfo, controller: countryInfoController,),
               const SizedBox(height: 8),
               
               const LabelWithAsterisk(labelText: AppString.zipCode),
-              const CustomTextFormField(hintText: AppString.zipCode),
+              CustomTextFormField(hintText: AppString.zipCode, controller:  zipCodeController),
               const SizedBox(height: 8),
               
               const LabelWithAsterisk(labelText: AppString.businessAddress),
-              const CustomTextFormField(hintText: AppString.businessAddress),
+              CustomTextFormField(hintText: AppString.businessAddress, controller: businessAddressController),
               const SizedBox(height: 8),
               
                

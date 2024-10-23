@@ -13,6 +13,9 @@ class VatTax extends StatefulWidget {
 }
 
 class _VatTaxState extends State<VatTax> {
+
+  final TextEditingController vatController = TextEditingController();
+  final TextEditingController   taxController = TextEditingController();
    
 
   @override
@@ -35,11 +38,11 @@ class _VatTaxState extends State<VatTax> {
               const SizedBox(height: 20),
               
               const LabelWithAsterisk(labelText: AppString.vat),
-              const CustomTextFormField(hintText: AppString.vat),
+               CustomTextFormField(hintText: AppString.vat, controller : vatController),
               const SizedBox(height: 8),
               
               const LabelWithAsterisk(labelText: AppString.tax),
-              const CustomTextFormField(hintText: AppString.tax),
+               CustomTextFormField(hintText: AppString.tax, controller: taxController,),
               const SizedBox(height: 8),
             
 

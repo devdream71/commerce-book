@@ -9,19 +9,21 @@ class CustomFourIconBottom extends StatelessWidget {
       child: Row(
         children: [
           SizedBox(
-            height: 30,
-            width: 30,
+            height: 27,
+            width: 27,
             child: Image.asset("assets/image/telegram-nobg.png"),
           ),
+          const SizedBox(width: 5,),
           SizedBox(
-            height: 30,
-            width: 30,
-            child: Image.asset("assets/image/whatsapp-nobg.png"),
+            height: 33,
+            width: 33,
+            child: Image.asset("assets/image/round_whats_app-nobg.png"),
           ),
+           const SizedBox(width: 5,),
           SizedBox(
-            height: 30,
-            width: 30,
-            child: Image.asset("assets/image/youtube-nobg.png"),
+            height: 29,
+            width: 29,
+            child: Image.asset("assets/image/round_youtube_logo2.png"),
           ),
           const Spacer(),
           SizedBox(

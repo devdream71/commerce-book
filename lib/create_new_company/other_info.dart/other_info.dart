@@ -15,6 +15,11 @@ class OtherInfo extends StatefulWidget {
 class _OtherInfoState extends State<OtherInfo> {
   bool isChecked = false;
 
+  final TextEditingController adminNameController = TextEditingController();
+  final TextEditingController mobileNumberController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController rePasswordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,10 +40,10 @@ class _OtherInfoState extends State<OtherInfo> {
               ),
               const SizedBox(height: 20),
               const LabelWithAsterisk(labelText: AppString.adminName),
-              const CustomTextFormField(hintText: AppString.adminName),
+              CustomTextFormField(hintText: AppString.adminName, controller: adminNameController,),
               const SizedBox(height: 8),
               const LabelWithAsterisk(labelText: AppString.mobileNumber),
-              const CustomTextFormField(hintText: AppString.mobileNumber),
+              CustomTextFormField(hintText: AppString.mobileNumber, controller: mobileNumberController,),
               const SizedBox(height: 8),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -145,10 +150,10 @@ class _OtherInfoState extends State<OtherInfo> {
                 height: 8,
               ),
               const LabelWithAsterisk(labelText: AppString.password),
-              const CustomTextFormField(hintText: AppString.password),
+                CustomTextFormField(hintText: AppString.password, controller: passwordController,),
               const SizedBox(height: 8),
               const LabelWithAsterisk(labelText: AppString.rePassword),
-              const CustomTextFormField(hintText: AppString.rePassword),
+              CustomTextFormField(hintText: AppString.rePassword, controller: rePasswordController,),
               const SizedBox(height: 8),
               Column(
                 children: [

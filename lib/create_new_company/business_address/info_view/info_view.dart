@@ -15,6 +15,8 @@ class InfoView extends StatefulWidget {
 class _InfoViewState extends State<InfoView> {
   bool isChecked = false;
 
+  TextEditingController passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -85,7 +87,7 @@ class _InfoViewState extends State<InfoView> {
               ),
               const SizedBox(height: 20),
               const LabelWithAsterisk(labelText: AppString.password),
-              const CustomTextFormField(hintText: AppString.password),
+              CustomTextFormField(hintText: AppString.password, controller: passwordController,),
               const SizedBox(height: 15),
               CustomButton(
                 text: "login",

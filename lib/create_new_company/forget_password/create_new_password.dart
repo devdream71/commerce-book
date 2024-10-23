@@ -19,6 +19,10 @@ class CreateNewPassword extends StatefulWidget {
 }
 
 class _CreateNewPasswordState extends State<CreateNewPassword> {
+
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController rePasswordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -124,8 +128,9 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                           child: const Text(AppString.newPassword)),
                       // const  CustomTextEditForm(),
               
-                      const CustomTextFormField(
+                        CustomTextFormField(
                         hintText: "Password",
+                        controller: passwordController,
                       ),
               
                       const Align(
@@ -133,8 +138,9 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                           child: const Text(AppString.rePassword)),
                       // const  CustomTextEditForm(),
               
-                      const CustomTextFormField(
+                        CustomTextFormField(
                         hintText: "re - Password",
+                          controller: rePasswordController,
                       ),
               
                       const SizedBox(

@@ -8,7 +8,8 @@ class CustomTextFormField extends StatelessWidget {
   final int? maxLines;
   final bool showDropdownIcon;  
   final VoidCallback ? onPressed;
-  final IconData? customIcon; 
+  final IconData? customIcon;
+  final TextEditingController controller;
 
   const CustomTextFormField({
     super.key,
@@ -16,7 +17,8 @@ class CustomTextFormField extends StatelessWidget {
     this.maxLines,
     this.showDropdownIcon = false, 
     this.onPressed, 
-    this.customIcon, 
+    this.customIcon,
+    required this.controller
   });
 
   @override
@@ -28,6 +30,7 @@ class CustomTextFormField extends StatelessWidget {
       ),
       child: TextFormField(
         maxLines: maxLines,
+        controller: controller,
         decoration: InputDecoration(
           border: InputBorder.none,
           hintText: hintText,

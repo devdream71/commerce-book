@@ -27,7 +27,6 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context)=>SideBarController())
       ],
       child: GetMaterialApp(
-        //routerConfig: routerConfig,
         title: 'Commerce Book',
         theme: ThemeData(
            
