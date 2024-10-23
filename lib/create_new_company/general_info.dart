@@ -35,45 +35,56 @@ class _GeneralInfoState extends State<GeneralInfo> {
 
               const Align(
                 alignment: Alignment.center,
-                child: const Text("Company Information", style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),)),
-              const SizedBox(height: 20,),
+                child: const Text("Company Information", style: TextStyle(color: Colors.black45, fontWeight: FontWeight.bold),)),
+              const SizedBox(height: 10,),
 
-              const LabelWithAsterisk(labelText: AppString.proprietorName,),
-                CustomTextFormField(hintText: AppString.proprietorName,
+              Align(
+                alignment: Alignment.center,
+                child: SizedBox(
+                  height: 100,
+                  width: 100,
+                  child: Image.asset("assets/image/cBook_logo_nobg.png"),
+                ),
+              ),
+
+              const SizedBox(height: 10,),
+
+              const LabelWithAsterisk(labelText: AppString.proprietorName, isRequired: true,),
+                CustomTextFormField(hintText: "Jasim Islam",
               controller: proprietorNameController,
               ),
               const SizedBox(height: 8,),
-              const LabelWithAsterisk(labelText: AppString.countryInfo),
-                CustomTextFormField(hintText: AppString.countryInfo, showDropdownIcon: true,
+              const LabelWithAsterisk(labelText: AppString.countryInfo, isRequired: true,),
+                CustomTextFormField(hintText: "Bangladesh", showDropdownIcon: true,
               controller: countryInfoController,
               ),
               const SizedBox(height: 8,),
-              const LabelWithAsterisk(labelText: AppString.mobile),
-              CustomTextFormField(hintText: AppString.mobile, controller: mobileController,),
+              const LabelWithAsterisk(labelText: AppString.mobile, isRequired: true,),
+              CustomTextFormField(hintText: "+880 1759 546853", controller: mobileController,),
               const SizedBox(height: 8,),
-              const LabelWithAsterisk(labelText: AppString.email),
-              CustomTextFormField(hintText: AppString.email, controller: emailController,),
+              const LabelWithAsterisk(labelText: AppString.email, isRequired: true,),
+              CustomTextFormField(hintText: "jasim@gmail.com", controller: emailController,),
               const SizedBox(height: 8,),
-              const LabelWithAsterisk(labelText: AppString.address),
-              CustomTextFormField(hintText: AppString.address, maxLines: 2, controller: addressController,),
+              const LabelWithAsterisk(labelText: AppString.address, isRequired: true,),
+              CustomTextFormField(hintText: "#H 24, #R 14, Dhanmondi, Dhaka Bangladesh", maxLines: 1, controller: addressController,),
 
               const SizedBox(height: 30,),
-
-
-
 
              //using custom bottom text.
               const BottomFourText(),
 
-              const SizedBox(height: 100,),
+              const SizedBox(height: 30,),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  CustomButton(onPressed: (){}, text: "Update", color: Colors.blue.withOpacity(0.2),),
+                  SizedBox(
+                      width: 100,
+                      child: CustomButton(onPressed: (){}, text: "Update", color: Colors.blue.withOpacity(0.2),)),
                   const SizedBox(width: 10,),
-                  CustomButton(onPressed: (){}, text: "Save", color: Colors.blue,),
-
+                  SizedBox(
+                    width: 100,
+                      child: CustomButton(onPressed: (){}, text: "Save", color: Colors.blue,)),
 
                 ],
               )

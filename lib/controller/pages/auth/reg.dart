@@ -212,6 +212,8 @@ class _RegPageState extends State<RegPage> {
                     ),
                     const SizedBox(height: 24),
                     const SizedBox(height: 16),
+
+
                     const SizedBox(height: 16),
                     FadeInDown(
                       delay: const Duration(milliseconds: 400),

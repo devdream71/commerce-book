@@ -268,7 +268,8 @@ class _AtaGlanceState extends State<AtaGlance> {
                   keyboardType: TextInputType.url,
                   validator: _appValidation.validateText,
                 ),
-                const SizedBox(height: 16),
+
+                const SizedBox(height: 5),
                 const Text("Twitter URL"),
                 const SizedBox(height: 5),
                 AppTextForm(
@@ -284,6 +285,13 @@ class _AtaGlanceState extends State<AtaGlance> {
                   assetPath: "assets/icons/mail_light.svg",
                   controller: _appFormState.youtubeController,
                   hintText: "YouTube URL",
+                  keyboardType: TextInputType.url,
+                ),
+                const SizedBox(height: 5,),
+                AppTextForm(
+                  assetPath: "assets/icons/mail_light.svg",
+                  controller: _appFormState.youtubeController,
+                  hintText: "Youtube",
                   keyboardType: TextInputType.url,
                 ),
                 const SizedBox(height: 16),

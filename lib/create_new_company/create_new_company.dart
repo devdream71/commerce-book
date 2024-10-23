@@ -14,9 +14,14 @@ import 'package:f_test/widgets/custom_text_edit_form.dart';
 import 'package:f_test/widgets/custom_thumb_up_five.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:provider/provider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../controller/controller/side_bar_controller.dart';
+import '../controller/pages/entry_point.dart';
+import '../controller/pages/welcome.dart';
 import '../utils/imagepath.dart';
+import 'business_address/business_addrerss.dart';
 
 class CreateNewCompany extends StatefulWidget {
   const CreateNewCompany({super.key});
@@ -188,10 +193,24 @@ class _CreateNewCompanyState extends State<CreateNewCompany> {
                       key: formKey,
                       child: Column(
                         children: [
+                          // InkWell(
+                          //   onTap: (){
+                          //
+                          //     //Get.to(SideBarController());
+                          //     //ChangeNotifierProvider(create: (context)=>SideBarController());
+                          //   },
+                          //
+                          //   child: SizedBox(
+                          //     height: 150,
+                          //     width: 150,
+                          //     child: Image.asset("assets/image/cBook_logo_nobg.png")),
+                          // ),
+
                           SizedBox(
                             height: 150,
                             width: 150,
-                            child: Image.asset("assets/image/cBook_logo_nobg.png")),
+                            child: Image.asset("assets/image/cBook_logo_nobg.png"),
+                          ),
 
                           const SizedBox(
                             height: 20,
@@ -201,7 +220,11 @@ class _CreateNewCompanyState extends State<CreateNewCompany> {
                             text: "Create New Company",
                             icon: Icons.add,
                             onPressed: () {
-                              Get.to(const GeneralInfo());
+                              //Get.to(const GeneralInfo());
+                              Get.to(() => ChangeNotifierProvider(
+                                create: (context) => SideBarController(),
+                                child: const EntryPoint(child: GeneralInfo(),),
+                              ));
                             },
                             color: const Color(0xff2196f3),
                           ),
@@ -229,6 +252,11 @@ class _CreateNewCompanyState extends State<CreateNewCompany> {
                           CustomTextFormField(
                             hintText: "Company E-mail",
                             controller: emailController,
+                            validator: (value) {
+                              if(value ==null || value.isEmpty) {
+                                return 'Please enter your valid Email';
+                              }
+                            },
 
                           ),
 

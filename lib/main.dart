@@ -26,22 +26,38 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (context)=>SideBarController())
       ],
-      child: GetMaterialApp(
+      child:
+
+
+      //left
+      GetMaterialApp(
         title: 'Commerce Book',
         theme: ThemeData(
-           
+
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
         //home: GeneralInfo(),
         //home: BusinessInfo(),
         //home: const BusinessAddrerss(),
-       // home: const VatTax(),
+       //home: const VatTax(),
         //home: const Signature(),
         //home: const OtherInfo(),
-        home: const CreateNewCompany(),
+        home: CreateNewCompany(),
       ),
-    );
+
+
+    //   MaterialApp.router(
+    //   routerConfig: routerConfig,
+    //   title: 'Commerce Book',
+    //   theme: ThemeData(
+    //     colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+    //     useMaterial3: true,
+    //   ),
+    // ),
+   );
   }
 }
+
+
 
