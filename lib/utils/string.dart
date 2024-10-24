@@ -73,7 +73,7 @@ static const String adminPassword = "Admin Password";
 
 static const String info = "Info View";
 
-static const String proprietorName = "Proprietor Name";
+static const String proprietorName = "Business/Company Name";
 static const String country = "Country";
 static const String mobile = "Mobile";
 static const String email = "Email";

@@ -123,17 +123,17 @@ class AdminUser extends StatelessWidget {
                             length: 2,
                             child: Column(
                               children: [
-                                const TabBar(
-                                  tabs: [
-                                    Tab(text: "Admin"),
-                                    Tab(text: "User"),
-                                  ],
-                                ),
+                                // const TabBar(
+                                //   tabs: [
+                                //     Tab(text: "Admin"),
+                                //     Tab(text: "User"),
+                                //   ],
+                                // ),
                                 Expanded(
                                   child: TabBarView(
                                     children: [
                                       buildAdminTable(),
-                                      buildUserTable(),
+                                      //buildUserTable(),
                                     ],
                                   ),
                                 ),
@@ -172,7 +172,7 @@ class AdminUser extends StatelessWidget {
       child: Table(
         border: TableBorder.all(),
         children: [
-          buildRow(['Company Name', 'Data', 'Action'], isHeader: true),
+          buildRow(['Company Name', 'Role', 'Action'], isHeader: true),
           for (var company in companyData)
             buildRow([company['company']!, company['data']!, 'Open'],
                 isHeader: false),
@@ -181,26 +181,81 @@ class AdminUser extends StatelessWidget {
     );
   }
 
-  // User Table
-  Widget buildUserTable() {
-    final List<Map<String, String>> companyData = [
-      {"company": "Dream International Ltd", "data": "500MB"},
-      {"company": "Nuzaima Enterprice", "data": "1.5GB"},
-    ];
 
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Table(
-        border: TableBorder.all(),
-        children: [
-          buildRow(['Company Name', 'Data', 'Action'], isHeader: true),
-          for (var company in companyData)
-            buildRow([company['company']!, company['data']!, 'Open'],
-                isHeader: false),
-        ],
-      ),
-    );
-  }
+
+  // Widget buildAdminTable() {
+  //   final List<Map<String, String>> companyData = [
+  //     {"company": "Dream International Ltd", "data": "500MB"},
+  //     {"company": "Nuzaima Enterprice", "data": "1.5GB"},
+  //   ];
+  //
+  //   return Padding(
+  //     padding: const EdgeInsets.all(16.0),
+  //     child: Table(
+  //       columnWidths: const {
+  //         0: FixedColumnWidth(200), // Fixing the width for company name column
+  //         1: FlexColumnWidth(),     // Flexible width for Role column
+  //         2: FixedColumnWidth(80),  // Fixing the width for action column
+  //       },
+  //       border: TableBorder.all(),
+  //       children: [
+  //         buildRow(['Company Name', 'Role', 'Action'], isHeader: true),
+  //         for (var company in companyData)
+  //           buildRow([company['company']!, company['data']!, 'Open'], isHeader: false),
+  //       ],
+  //     ),
+  //   );
+  // }
+  //
+  // TableRow buildRow(List<String> cells, {bool isHeader = false}) {
+  //   return TableRow(
+  //     children: cells.map((cell) {
+  //       return Padding(
+  //         padding: const EdgeInsets.all(8.0),
+  //         child: SizedBox(
+  //           width: isHeader ? null : 200, // Use a fixed width only for non-header rows
+  //           child: Text(
+  //             cell,
+  //             style: TextStyle(
+  //               fontWeight: isHeader ? FontWeight.bold : FontWeight.normal,
+  //               overflow: TextOverflow.ellipsis, // Show ellipsis if text overflows
+  //             ),
+  //             maxLines: 1,
+  //             softWrap: false,
+  //           ),
+  //         ),
+  //       );
+  //     }).toList(),
+  //   );
+  // }
+
+
+
+
+
+
+
+
+  // // User Table
+  // Widget buildUserTable() {
+  //   final List<Map<String, String>> companyData = [
+  //     {"company": "Dream International Ltd", "data": "500MB"},
+  //     {"company": "Nuzaima Enterprice", "data": "1.5GB"},
+  //   ];
+  //
+  //   return Padding(
+  //     padding: const EdgeInsets.all(16.0),
+  //     child: Table(
+  //       border: TableBorder.all(),
+  //       children: [
+  //         buildRow(['Company Name', 'Data', 'Action'], isHeader: true),
+  //         for (var company in companyData)
+  //           buildRow([company['company']!, company['data']!, 'Open'],
+  //               isHeader: false),
+  //       ],
+  //     ),
+  //   );
+  // }
 
   // Helper to create table rows
   TableRow buildRow(List<String> cells, {bool isHeader = false}) {

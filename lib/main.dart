@@ -9,6 +9,7 @@ import 'package:f_test/create_new_company/other_info.dart/other_info.dart';
 import 'package:f_test/create_new_company/signature/signature.dart';
 import 'package:f_test/create_new_company/vat_tax/vat_tax.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
@@ -22,39 +23,42 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
     return MultiProvider(
+
       providers: [
         ChangeNotifierProvider(create: (context)=>SideBarController())
       ],
       child:
 
-
       //left
-      // GetMaterialApp(
-      //   title: 'Commerce Book',
-      //   theme: ThemeData(
-      //
-      //     colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      //     useMaterial3: true,
-      //   ),
-      //   //home: GeneralInfo(),
-      //   //home: BusinessInfo(),
-      //   //home: const BusinessAddrerss(),
-      //  //home: const VatTax(),
-      //   //home: const Signature(),
-      //   //home: const OtherInfo(),
-      //   home: CreateNewCompany(),
-      // ),
+      GetMaterialApp(
+        title: 'Commerce Book',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
 
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
 
-      MaterialApp.router(
-      routerConfig: routerConfig,
-      title: 'Commerce Book',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        ),
+        //home: GeneralInfo(),
+        //home: BusinessInfo(),
+        //home: const BusinessAddrerss(),
+       //home: const VatTax(),
+        //home: const Signature(),
+        //home: const OtherInfo(),
+        home: CreateNewCompany(),
       ),
-    ),
+
+
+    //   MaterialApp.router(
+    //   routerConfig: routerConfig,
+    //   title: 'Commerce Book',
+    //   theme: ThemeData(
+    //     colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+    //     useMaterial3: true,
+    //   ),
+    // ),
    );
   }
 }
